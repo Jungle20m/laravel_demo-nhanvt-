@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demo', function(){
-    return view('demo/index');
-});
+
+Route::get('zotas', 'ZotasController@index')->name('zotas.index');
+Route::post('zotas', 'ZotasController@store')->name('zotas.store');
+// Route::get('zotas/update', 'ZotasController@update')->name('zotas.update');
+Route::delete('zotas/destroy', 'ZotasController@destroy')->name('zotas.destroy');
+
